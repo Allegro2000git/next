@@ -1,14 +1,16 @@
 import { PropsWithChildren } from "react";
-import style from "./Card.module.scss";
+import styles from "./Card.module.scss"
 
 type PropsType = {
     name: string;
 };
 
-export const Card = ({ children, name }: PropsWithChildren<PropsType>) => {
+export const Card = (props: PropsWithChildren<PropsType>) => {
+    const { children, name } = props;
+
     return (
-        <div className={style.wrapperCard}>
-            <div className={style.name}>{name}</div>
+        <div className={styles.wrapperCard}>
+            <div className={styles.name}>{name}</div>
             {children}
         </div>
     );

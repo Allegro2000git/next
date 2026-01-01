@@ -1,5 +1,5 @@
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
-import {getLayout} from "@/components/Layout/Layout";
+import {getLayout} from "@/components/Layout/BaseLayout/BaseLayout";
 import {API} from "@/assets/api/api";
 import type {EpisodeType, ResponseType} from "@/assets/api/rick-and-morty-api";
 import {Card} from "@/components/Card/Card";

@@ -1,7 +1,19 @@
 .sections {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
   margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width:  150px;
+  height: 30px;
 }

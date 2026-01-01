@@ -1,9 +1,9 @@
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
-import {getLayout} from "@/components/Layout/Layout";
 import Image from "next/image";
 import mainImage from "@/public/rickandMorty.png";
 import next from "@/public/next.svg";
 import style from "styles/Home.module.scss";
+import {getLayout} from "@/components/Layout/BaseLayout/BaseLayout";
 
 
 function Home() {

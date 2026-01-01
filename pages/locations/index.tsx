@@ -1,5 +1,5 @@
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
-import {getLayout} from "@/components/Layout/Layout";
+import {getLayout} from "@/components/Layout/BaseLayout/BaseLayout";
 import type {LocationType, ResponseType} from "@/assets/api/rick-and-morty-api";
 import axios from "axios";
 import {dehydrate, QueryClient, useQuery} from "@tanstack/react-query";

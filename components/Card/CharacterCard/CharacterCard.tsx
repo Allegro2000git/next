@@ -1,15 +1,19 @@
 import Image from "next/image";
-import styles from "./CharacterCard.module.scss";
 import type {CharacterType} from "@/assets/api/rick-and-morty-api";
+import {Card} from "@/components/Card/Card";
+import Link from "next/link";
 
 type Props = {
     person: CharacterType
 };
-export const CharacterCard = ({person}: Props) => {
+export const CharacterCard = (props: Props) => {
+    const {id, name, image, status} = props.person
+
     return (
-        <div className={styles.card}>
-            {person.name}
-            <Image width={300} height={300} src={person.image} alt={`Picture of ${person.name}`}/>
-        </div>
+        <Card name={name}>
+            <Link href={`/characters/${id}`}>
+                <Image width={300} height={300} src={image} alt={`Picture of ${name}`}/>
+            </Link>
+        </Card>
     );
 };
