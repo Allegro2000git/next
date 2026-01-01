@@ -1,83 +1,19 @@
-import Image from "next/image";
-import {Geist, Geist_Mono} from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
 import {getLayout} from "@/components/Layout/Layout";
+import Image from "next/image";
+import mainImage from "@/public/rickandMorty.png";
+import next from "@/public/next.svg";
+import style from "styles/Home.module.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 function Home() {
   return (
-    <>
+    <div className={style.main}>
       <HeadMeta title={"Create Next App"} />
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
-      >
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js logo"
-            width={100}
-            height={20}
-            priority
-          />
-          <div className={styles.intro}>
-            <h1>To get started, edit the index.tsx file.</h1>
-            <p>
-              Looking for a starting point or more instructions? Head over to{" "}
-              <a
-                href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Templates
-              </a>{" "}
-              or the{" "}
-              <a
-                href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learning
-              </a>{" "}
-              center.
-            </p>
-          </div>
-          <div className={styles.ctas}>
-            <a
-              className={styles.primary}
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className={styles.logo}
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={16}
-                height={16}
-              />
-              Deploy Now
-            </a>
-            <a
-              className={styles.secondary}
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Documentation
-            </a>
-          </div>
-      </div>
-    </>
+        <Image src={mainImage} alt={""} />
+        <h1 className={style.title}>Rick and Morty</h1>
+        <Image src={next} alt={""} />
+    </div>
   );
 }
 

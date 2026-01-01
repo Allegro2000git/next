@@ -1,5 +1,9 @@
 .links {
     display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px auto;
+    justify-content: center;
     gap: 20px;
 
   & a:hover {

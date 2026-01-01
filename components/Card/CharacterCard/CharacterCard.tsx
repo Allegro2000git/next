@@ -1,6 +1,6 @@
 import Image from "next/image";
-import type {CharacterType} from "@/assets/hooks/useCharacters";
 import styles from "./CharacterCard.module.scss";
+import type {CharacterType} from "@/assets/api/rick-and-morty-api";
 
 type Props = {
     person: CharacterType

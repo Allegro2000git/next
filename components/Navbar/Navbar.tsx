@@ -6,6 +6,8 @@ export const Navbar= () => {
         <div className={styles.links}>
             <Link href={'/'}>Main</Link>
             <Link href={'/characters'}>Characters</Link>
+            <Link href={'/locations'}>Locations</Link>
+            <Link href={'/episodes'}>Episodes</Link>
         </div>
     );
 };
