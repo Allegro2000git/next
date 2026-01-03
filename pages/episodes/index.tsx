@@ -3,8 +3,11 @@ import {getLayout} from "@/components/Layout/BaseLayout/BaseLayout";
 import {API} from "@/assets/api/api";
 import type {EpisodeType, ResponseType} from "@/assets/api/rick-and-morty-api";
 import {Card} from "@/components/Card/Card";
+import type {GetServerSideProps} from "next";
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({res}) => {
+    res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=100')
+
     const episodes = await API.rickAndMorty.getEpisodes()
 
     if (!episodes) {
