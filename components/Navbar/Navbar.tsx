@@ -9,6 +9,7 @@ export const Navbar= () => {
             <Link href={'/locations'}>Locations</Link>
             <Link href={'/episodes'}>Episodes</Link>
             <Link href={'/test'}>Test</Link>
+            <Link href={'/private'}>Private</Link>
         </div>
     );
 };
