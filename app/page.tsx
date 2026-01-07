@@ -2,9 +2,7 @@ import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
 import Image from "next/image";
 import mainImage from "@/public/rickandMorty.png";
 import next from "@/public/next.svg";
-import style from "styles/Home.module.scss";
-import {getLayout} from "@/components/Layout/BaseLayout/BaseLayout";
-
+import style from "@/styles/Home.module.scss";
 
 function Home() {
   return (
@@ -16,7 +14,5 @@ function Home() {
     </div>
   );
 }
-
-Home.getLayout = getLayout
 
 export default Home

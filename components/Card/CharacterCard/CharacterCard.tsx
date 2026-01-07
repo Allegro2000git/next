@@ -22,7 +22,7 @@ export const CharacterCard = (props: Props) => {
     return (
             <Card name={name}>
                 <Image src={statusImages[status]} alt={"status of character"} width={20} height={20}/>
-                <Link href={`/characters/${id}`}>
+                <Link href={`/app/characters/${id}`}>
                     <Image width={300} height={300} src={image} alt={`Picture of ${name}`}/>
                 </Link>
             </Card>
