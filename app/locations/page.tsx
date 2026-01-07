@@ -12,7 +12,7 @@ function Locations() {
 
     useEffect(() => {
         API.rickAndMorty.getLocations().then(res => setLocations(res.results))
-    })
+    }, [])
 
     if (!locations) return null
 
